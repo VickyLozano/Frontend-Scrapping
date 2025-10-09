@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { BiSolidShow } from "react-icons/bi";
+import { GoEyeClosed } from "react-icons/go";
 import "./Register.css";
 
 
@@ -75,7 +77,6 @@ console.log(data);
       <form className="register-form" onSubmit={handleSubmit}>
         <h1>Crear una cuenta</h1>
 
-        <label>Nombre de usuario</label>
         <input
           type="text"
           placeholder="Nombre de usuario"
@@ -84,7 +85,6 @@ console.log(data);
           required
         />
 
-        <label>Contraseña</label>
         <div className="password-container">
           <input
             type={showPassword ? "text" : "password"}
@@ -100,7 +100,7 @@ console.log(data);
             onClick={() => setShowPassword(!showPassword)}
             title={showPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
           >
-            {showPassword ? "👁" : "👁‍🗨"}
+            {showPassword ? <BiSolidShow /> :  <GoEyeClosed />}
           </span>
         </div>
 
@@ -117,7 +117,6 @@ console.log(data);
           </div>
         )}
 
-        <label>Confirmar contraseña</label>
         <input
           type="password"
           placeholder="Confirmar contraseña"
@@ -126,7 +125,6 @@ console.log(data);
           required
         />
 
-        <label>Usuario SIMA</label>
         <input
           type="text"
           placeholder="Nombre de usuario SIMA"
@@ -135,7 +133,6 @@ console.log(data);
           required
         />
 
-        <label>Contraseña SIMA</label>
         <div className="password-container">
           <input
             type={showSimaPassword ? "text" : "password"}
@@ -149,7 +146,7 @@ console.log(data);
             onClick={() => setShowSimaPassword(!showSimaPassword)}
             title={showSimaPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
           >
-            {showSimaPassword ? "👁" : "👁‍🗨"}
+            {showSimaPassword ? <BiSolidShow /> :  <GoEyeClosed />}
           </span>
         </div>
 
