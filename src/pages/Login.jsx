@@ -15,13 +15,14 @@ function Login() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:3001/api/auth/login", {
+      const response = await fetch("http://localhost:3000/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
       });
 
       const data = await response.json();
+      console.log(data);
 
       if (response.ok && data.success && data.token) {
         // Guardar el token en memoria (usando una variable o contexto)
@@ -29,7 +30,7 @@ function Login() {
         console.log("Token recibido:", data.token);
         
         // Puedes guardar el token en sessionStorage temporalmente
-        sessionStorage.setItem("token", data.token);
+        localStorage.setItem("token", data.token);
         
         setErrorMessage("");
         alert("Inicio de sesión exitoso ✅");

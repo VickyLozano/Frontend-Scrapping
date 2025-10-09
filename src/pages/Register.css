@@ -7,7 +7,7 @@
 html, body {
   height: 100%;
   width: 100%;
-  overflow: hidden; /* evita el scroll lateral y vertical */
+  overflow-x: hidden; /* evita el scroll lateral y vertical */
 }
 
 /*  Fondo general  */
@@ -17,7 +17,7 @@ html, body {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(to right, #6cff5f, #abfe7b);
+  background: linear-gradient(to right, #5fc4ff, #5fc4ff);
   font-family: "Poppins", sans-serif;
   overflow: hidden;
   margin: 0;

@@ -8,7 +8,7 @@
 html, body {
   height: 100%;
   width: 100%;
-  overflow: hidden; /* evita el scroll lateral y vertical */
+  overflow-x: hidden; /* evita el scroll lateral y vertical */
 }
 
 
@@ -19,7 +19,7 @@ html, body {
   align-items: center;
   min-height: 100vh; 
   width: 100vw;      
-  background: linear-gradient(to right, #e45fff, #eafe7b);
+  background: linear-gradient(to right, #5fc4ff, #5fc4ff);
   font-family: "Poppins", sans-serif;
 }
 

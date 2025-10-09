@@ -40,7 +40,7 @@ export function Register({ onLoginClick }) {
     }
 
     try {
-      const response = await fetch("http://localhost:3001/api/auth/register", {
+      const response = await fetch("http://localhost:3000/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 
@@ -52,7 +52,7 @@ export function Register({ onLoginClick }) {
       });
 
       const data = await response.json();
-
+console.log(data);
       if (response.ok) {
         setMessage("✅ Registro exitoso. ¡Bienvenido!");
         setSuccess(true);
@@ -100,7 +100,7 @@ export function Register({ onLoginClick }) {
             onClick={() => setShowPassword(!showPassword)}
             title={showPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
           >
-            {showPassword }
+            {showPassword ? "👁" : "👁‍🗨"}
           </span>
         </div>
 
@@ -149,7 +149,7 @@ export function Register({ onLoginClick }) {
             onClick={() => setShowSimaPassword(!showSimaPassword)}
             title={showSimaPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
           >
-            {showSimaPassword}
+            {showSimaPassword ? "👁" : "👁‍🗨"}
           </span>
         </div>
 
@@ -161,7 +161,7 @@ export function Register({ onLoginClick }) {
 
         <p className="switch-text">
           ¿Ya tienes una cuenta?{" "}
-          <span className="link" onClick={onLoginClick}>
+          <span className="link" onClick={() => navigate("/")}>
             Inicia sesión
           </span>
         </p>

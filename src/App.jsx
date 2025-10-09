@@ -9,6 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/home" element={<h1>Home - Bienvenido</h1>} />
         {/* Puedes agregar más rutas luego, como Home */}
       </Routes>
     </Router>
