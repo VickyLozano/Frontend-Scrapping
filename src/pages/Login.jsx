@@ -29,7 +29,6 @@ function Login() {
         // NUNCA usar localStorage para tokens en producción
         console.log("Token recibido:", data.token);
         
-        // Puedes guardar el token en sessionStorage temporalmente
         localStorage.setItem("token", data.token);
         
         setErrorMessage("");
@@ -47,6 +46,8 @@ function Login() {
   };
 
   return (
+
+    
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
         <h1>Iniciar Sesión</h1>
@@ -71,6 +72,10 @@ function Login() {
           disabled={loading}
         />
 
+        <p className="forgot-password">
+         <a href="#">¿Olvidaste tu contraseña?</a>
+        </p>
+
         {errorMessage && <p className="error-message">{errorMessage}</p>}
 
         <button type="submit" disabled={loading}>
@@ -80,6 +85,7 @@ function Login() {
         <p className="register-link">
           ¿No tienes cuenta? <Link to="/register">Regístrate</Link>
         </p>
+
       </form>
     </div>
   );

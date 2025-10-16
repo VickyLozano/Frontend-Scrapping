@@ -1,4 +1,4 @@
-/* Reseteo básico */
+/* ====== Reset básico ====== */
 * {
   margin: 0;
   padding: 0;
@@ -8,113 +8,141 @@
 html, body {
   height: 100%;
   width: 100%;
-  overflow-x: hidden; /* evita el scroll lateral y vertical */
+  font-family: "Inter", "Poppins", sans-serif;
+  background-color: #f3f4f6; /* Fondo gris muy claro */
+  color: #111827;
 }
 
-
-/*  Fondo general */
+/* ====== Contenedor principal ====== */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; 
-  width: 100vw;      
-  background: linear-gradient(to right, #5fc4ff, #5fc4ff);
-  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  width: 100vw;
 }
 
-/*  Card  */
+/* ====== Tarjeta del formulario ====== */
 .login-form {
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 16px;
-  width: 420px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  padding: 40px 45px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 400px;
+  max-width: 90%;
 }
 
-/* Título  */
+/* ====== Encabezado ====== */
 .login-form h1 {
-  text-align: center;
-  margin-bottom: 25px;
-  color: #333;
+  font-size: 1.8rem;
   font-weight: 700;
+  text-align: center;
+  color: #111827;
+  margin-bottom: 10px;
 }
 
-/*  Etiquetas  */
+/* ====== Etiquetas ====== */
 label {
   display: block;
   font-weight: 600;
+  font-size: 0.95rem;
   margin-bottom: 6px;
-  color: #333;
+  color: #374151;
 }
 
-/*  Campos  */
+/* ====== Campos de entrada ====== */
 input {
   width: 100%;
   padding: 12px;
-  margin-bottom: 18px;
-  border: 1px solid #ccc;
+  border: 1px solid #d1d5db;
   border-radius: 8px;
-  font-size: 15px;
-  transition: 0.3s;
+  font-size: 0.95rem;
+  color: #111827;
+  background-color: #f9fafb;
+  margin-bottom: 18px;
+  transition: all 0.2s ease;
 }
 
 input:focus {
-  border-color: #5fffff;
+  border-color: #10b981; /* Verde suave */
   outline: none;
-  box-shadow: 0 0 5px rgba(255, 126, 95, 0.4);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
 }
 
-/*  Botón  */
+/* ====== Botón ====== */
 button {
   width: 100%;
-  padding: 14px;
-  background-color: #ff5fc2;
+  padding: 12px;
+  background-color: #10b981;
   color: white;
+  font-weight: 600;
   border: none;
   border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-  background-color: #feb47b;
+  background-color: #059669;
 }
 
-/*  Mensaje de error  */
-.error-message {
-  color: red;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 15px;
+/* ====== Enlaces y textos ====== */
+.register-link,
+/* ====== Enlace: ¿Olvidaste tu contraseña? ====== */
+.forgot-password {
+  text-align: right;
+  margin-top: -8px;
+  margin-bottom: 18px;
 }
 
-/*  Link de registro  */
+.forgot-password a {
+  color: #051396;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+  color: #051396;
+}
+
+/* ====== Enlace: ¿No tienes cuenta? Regístrate ====== */
 .register-link {
-  text-align: center;
-  margin-top: 20px;
+  text-align: center; /* ✅ centrado */
+  font-size: 0.9rem;
+  margin-top: 14px;
 }
 
 .register-link a {
-  color: #5f8aff;
-  font-weight: bold;
+  color: #051396;
+  font-weight: 500;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .register-link a:hover {
   text-decoration: underline;
+  color: #041978;
 }
 
-/*  Responsivo */
+
+/* ====== Mensaje de error ====== */
+.error-message {
+  text-align: center;
+  color: #dc2626;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* ====== Responsivo ====== */
 @media (max-width: 600px) {
   .login-form {
     width: 90%;
     padding: 25px;
   }
-
-  button {
-    font-size: 15px;
-  }
 }
+
+
