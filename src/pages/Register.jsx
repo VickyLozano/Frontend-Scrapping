@@ -4,7 +4,6 @@ import { BiSolidShow } from "react-icons/bi";
 import { GoEyeClosed } from "react-icons/go";
 import "./Register.css";
 
-
 export function Register({ onLoginClick }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -54,7 +53,7 @@ export function Register({ onLoginClick }) {
       });
 
       const data = await response.json();
-console.log(data);
+      console.log(data);
       if (response.ok) {
         setMessage("✅ Registro exitoso. ¡Bienvenido!");
         setSuccess(true);
@@ -77,31 +76,37 @@ console.log(data);
       <form className="register-form" onSubmit={handleSubmit}>
         <h1>Crear una cuenta</h1>
 
-        <input
-          type="text"
-          placeholder="Nombre de usuario"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-        />
-
-        <div className="password-container">
+        <div className="form-group">
+          <label>Nombre de usuario</label>
           <input
-            type={showPassword ? "text" : "password"}
-            placeholder="Crea tu contraseña"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            onFocus={() => setPasswordFocus(true)}
-            onBlur={() => setPasswordFocus(false)}
+            type="text"
+            placeholder="Ingresa tu nombre de usuario"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
             required
           />
-          <span
-            className="toggle-password"
-            onClick={() => setShowPassword(!showPassword)}
-            title={showPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
-          >
-            {showPassword ? <BiSolidShow /> :  <GoEyeClosed />}
-          </span>
+        </div>
+
+        <div className="form-group">
+          <label>Crea tu contraseña</label>
+          <div className="password-container">
+            <input
+              type={showPassword ? "text" : "password"}
+              placeholder="Ingresa tu contraseña"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              onFocus={() => setPasswordFocus(true)}
+              onBlur={() => setPasswordFocus(false)}
+              required
+            />
+            <span
+              className="toggle-password"
+              onClick={() => setShowPassword(!showPassword)}
+              title={showPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
+            >
+              {showPassword ? <BiSolidShow /> : <GoEyeClosed />}
+            </span>
+          </div>
         </div>
 
         {/* Ventana de requisitos */}
@@ -117,37 +122,46 @@ console.log(data);
           </div>
         )}
 
-        <input
-          type="password"
-          placeholder="Confirmar contraseña"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          required
-        />
+        <div className="form-group">
+  <label>Confirmar contraseña</label>
+    <input
+      type="password"
+      placeholder="Confirma tu contraseña"
+      value={confirmPassword}
+      onChange={(e) => setConfirmPassword(e.target.value)}
+      required
+    />
+</div>
 
-        <input
-          type="text"
-          placeholder="Nombre de usuario SIMA"
-          value={simaUsername}
-          onChange={(e) => setSimaUsername(e.target.value)}
-          required
-        />
-
-        <div className="password-container">
+        <div className="form-group">
+          <label>Nombre de usuario SIMA</label>
           <input
-            type={showSimaPassword ? "text" : "password"}
-            placeholder="Contraseña de SIMA"
-            value={simaPassword}
-            onChange={(e) => setSimaPassword(e.target.value)}
+            type="text"
+            placeholder="Ingresa tu nombre de usuario SIMA"
+            value={simaUsername}
+            onChange={(e) => setSimaUsername(e.target.value)}
             required
           />
-          <span
-            className="toggle-password"
-            onClick={() => setShowSimaPassword(!showSimaPassword)}
-            title={showSimaPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
-          >
-            {showSimaPassword ? <BiSolidShow /> :  <GoEyeClosed />}
-          </span>
+        </div>
+
+        <div className="form-group">
+          <label>Contraseña de SIMA</label>
+          <div className="password-container">
+            <input
+              type={showSimaPassword ? "text" : "password"}
+              placeholder="Ingresa tu contraseña de SIMA"
+              value={simaPassword}
+              onChange={(e) => setSimaPassword(e.target.value)}
+              required
+            />
+            <span
+              className="toggle-password"
+              onClick={() => setShowSimaPassword(!showSimaPassword)}
+              title={showSimaPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
+            >
+              {showSimaPassword ? <BiSolidShow /> : <GoEyeClosed />}
+            </span>
+          </div>
         </div>
 
         <button type="submit">Registrarme</button>
@@ -166,11 +180,3 @@ console.log(data);
     </div>
   );
 }
-
-
-
-
-
-
-
-

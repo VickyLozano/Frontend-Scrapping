@@ -1,4 +1,3 @@
-/* ====== Reset básico ====== */
 * {
   margin: 0;
   padding: 0;
@@ -9,66 +8,60 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: "Inter", "Poppins", sans-serif;
-  background-color: #f3f4f6; /* Fondo gris muy claro */
+  background-color: #f3f4f6;
   color: #111827;
+  overflow-x: hidden;
 }
 
-/* ====== Contenedor principal ====== */
+/*  Contenedor principal */
 .register-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   padding: 20px;
 }
 
-/* ====== Tarjeta del formulario ====== */
+/*  Tarjeta del formulario  */
 .register-form {
   background-color: #ffffff;
   padding: 40px 45px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  width: 400px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 450px;
 }
 
-/* ====== Encabezado ====== */
+/*  Encabezado */
 .register-form h1 {
   font-size: 1.8rem;
   font-weight: 700;
   text-align: center;
   color: #111827;
-  margin-bottom: 8px;
-}
-
-/* ====== Subtítulo ====== */
-.register-form > p {
-  text-align: center;
-  color: #6b7280;
-  font-size: 0.95rem;
   margin-bottom: 28px;
-  font-weight: 400;
 }
 
-/* ====== Contenedor de campos ====== */
+/* Contenedor de campos */
 .form-group {
-  margin-bottom: 18px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* ====== Etiquetas ====== */
+/* Etiquetas */
 label {
   display: block;
   font-weight: 600;
   font-size: 0.95rem;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   color: #374151;
 }
 
-/* ====== Campos de entrada ====== */
+/*  Campos de entrada */
 input {
   width: 100%;
-  padding: 12px;
+  padding: 12px 14px;
   border: 1px solid #d1d5db;
   border-radius: 8px;
   font-size: 0.95rem;
@@ -80,18 +73,36 @@ input {
 
 input::placeholder {
   color: #9ca3af;
+  transition: color 0.2s ease;
 }
 
 input:focus {
-  border-color: #10b981; /* Verde suave */
+  border-color: #10b981;
   outline: none;
   background-color: #ffffff;
   box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
 }
 
-/* ====== Contenedor de contraseña con ícono ====== */
+input:focus::placeholder {
+  color: #d1d5db;
+}
+
+/*  Estados de error */
+input.error {
+  border-color: #dc2626;
+  background-color: #fef2f2;
+}
+
+input.error:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+}
+
+/* = Contenedor de contraseña con ícono  */
 .password-container {
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .password-container input {
@@ -102,53 +113,59 @@ input:focus {
   position: absolute;
   right: 12px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-80%);
   cursor: pointer;
-  font-size: 18px;
+  font-size: 20px;
   background: none;
   border: none;
   padding: 0;
-  width: 25px;
-  height: 25px;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #9ca3af;
-  transition: 0.3s;
+  transition: color 0.2s ease;
 }
 
 .toggle-password:hover {
   color: #6b7280;
 }
 
-/* ====== Botón principal ====== */
+/*  Botón principal  */
 button[type="submit"] {
   width: 100%;
-  padding: 12px;
+  padding: 14px 16px;
+  min-height: 48px;
   background-color: #10b981;
   color: white;
   font-weight: 600;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
   font-size: 0.95rem;
-  margin-top: 8px;
+  margin-top: 12px;
   font-family: "Inter", "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button[type="submit"]:hover {
   background-color: #059669;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+  transform: translateY(-1px);
 }
 
 button[type="submit"]:active {
-  transform: scale(0.98);
+  transform: translateY(0);
 }
 
-/* ====== Mensaje de validación ====== */
+/*  Mensaje de validación */
 .message {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 14px;
   font-weight: 600;
   font-size: 0.9rem;
 }
@@ -161,19 +178,20 @@ button[type="submit"]:active {
   color: #10b981;
 }
 
-/* ====== Ventanita de requisitos ====== */
+/*  Ventanita de requisitos */
 .password-requirements {
   background: #f9fafb;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   padding: 12px;
   font-size: 0.85rem;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+  margin-top: -12px;
   transition: 0.3s;
 }
 
 .password-requirements p {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-weight: 600;
   color: #374151;
   font-size: 0.9rem;
@@ -214,11 +232,11 @@ button[type="submit"]:active {
   font-size: 0.9rem;
 }
 
-/* ====== Enlace: ¿Ya tienes cuenta? Inicia sesión ====== */
+/*  Enlace: ¿Ya tienes cuenta? Inicia sesión  */
 .switch-text {
   text-align: center;
   font-size: 0.9rem;
-  margin-top: 14px;
+  margin-top: 18px;
   color: #6b7280;
 }
 
@@ -233,36 +251,4 @@ button[type="submit"]:active {
 .link:hover {
   text-decoration: underline;
   color: #041978;
-}
-
-/* ====== Responsivo ====== */
-@media (max-width: 600px) {
-  .register-form {
-    width: 90%;
-    padding: 25px;
-  }
-
-  .register-form h1 {
-    font-size: 1.5rem;
-    margin-bottom: 6px;
-  }
-
-  .register-form > p {
-    margin-bottom: 20px;
-    font-size: 0.9rem;
-  }
-
-  input {
-    padding: 11px;
-    font-size: 0.9rem;
-  }
-
-  button[type="submit"] {
-    font-size: 0.9rem;
-    padding: 11px;
-  }
-
-  label {
-    font-size: 0.9rem;
-  }
 }
