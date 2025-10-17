@@ -86,7 +86,7 @@ export function Dashboard() {
               </div>
               <div className="event-card">
                 <h3>Foro de Programación Distribuida</h3>
-                <p> Martes, 23:59</p>
+                 <p>Martes, 23:59</p>
                 <span>Programación Distribuida</span>
               </div>
             </div>

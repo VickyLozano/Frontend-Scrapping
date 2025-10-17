@@ -4,7 +4,7 @@ import { BiSolidShow } from "react-icons/bi";
 import { GoEyeClosed } from "react-icons/go";
 import "./Register.css";
 
-export function Register({ onLoginClick }) {
+export function Register() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
