@@ -137,7 +137,7 @@ export function Register({ onLoginClick }) {
           <label>Nombre de usuario SIMA</label>
           <input
             type="text"
-            placeholder="Ingresa tu nombre de usuario SIMA"
+            placeholder="Ingresa Documento de identidad"
             value={simaUsername}
             onChange={(e) => setSimaUsername(e.target.value)}
             required

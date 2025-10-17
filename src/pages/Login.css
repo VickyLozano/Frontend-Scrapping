@@ -1,4 +1,3 @@
-/* ====== Reset básico ====== */
 * {
   margin: 0;
   padding: 0;
@@ -9,11 +8,11 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: "Inter", "Poppins", sans-serif;
-  background-color: #f3f4f6; /* Fondo gris muy claro */
+  background-color: #f3f4f6; 
   color: #111827;
 }
 
-/* ====== Contenedor principal ====== */
+/*  Contenedor principal  */
 .login-container {
   display: flex;
   justify-content: center;
@@ -22,7 +21,7 @@ html, body {
   width: 100vw;
 }
 
-/* ====== Tarjeta del formulario ====== */
+/*  Tarjeta del formulario  */
 .login-form {
   background-color: #ffffff;
   padding: 40px 45px;
@@ -32,7 +31,7 @@ html, body {
   max-width: 90%;
 }
 
-/* ====== Encabezado ====== */
+/*  Encabezado  */
 .login-form h1 {
   font-size: 1.8rem;
   font-weight: 700;
@@ -41,7 +40,7 @@ html, body {
   margin-bottom: 10px;
 }
 
-/* ====== Etiquetas ====== */
+/*  Etiquetas  */
 label {
   display: block;
   font-weight: 600;
@@ -50,10 +49,10 @@ label {
   color: #374151;
 }
 
-/* ====== Campos de entrada ====== */
+/*  Campos de entrada  */
 input {
   width: 100%;
-  padding: 12px;
+  padding: 8px;
   border: 1px solid #d1d5db;
   border-radius: 8px;
   font-size: 0.95rem;
@@ -70,13 +69,13 @@ input:focus {
   box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
 }
 
-/* ====== Botón ====== */
+/*  Botón */
 button {
   width: 100%;
   padding: 12px;
   background-color: #10b981;
   color: white;
-  font-weight: 600;
+  font-weight:600;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -87,9 +86,9 @@ button:hover {
   background-color: #059669;
 }
 
-/* ====== Enlaces y textos ====== */
+/* Enlaces y textos  */
 .register-link,
-/* ====== Enlace: ¿Olvidaste tu contraseña? ====== */
+/*  Enlace: ¿Olvidaste tu contraseña?  */
 .forgot-password {
   text-align: right;
   margin-top: -8px;
@@ -109,7 +108,7 @@ button:hover {
   color: #051396;
 }
 
-/* ====== Enlace: ¿No tienes cuenta? Regístrate ====== */
+/* Enlace: ¿No tienes cuenta? Regístrate  */
 .register-link {
   text-align: center; /* ✅ centrado */
   font-size: 0.9rem;
@@ -129,7 +128,7 @@ button:hover {
 }
 
 
-/* ====== Mensaje de error ====== */
+/*  Mensaje de error  */
 .error-message {
   text-align: center;
   color: #dc2626;
@@ -137,7 +136,7 @@ button:hover {
   margin-bottom: 10px;
 }
 
-/* ====== Responsivo ====== */
+/* Responsivo */
 @media (max-width: 600px) {
   .login-form {
     width: 90%;

@@ -33,7 +33,8 @@ function Login() {
         
         setErrorMessage("");
         alert("Inicio de sesión exitoso ✅");
-        navigate("/home");
+        navigate("/dashboard");
+       
       } else {
         setErrorMessage(`❌ ${data.error || data.message || "Error al iniciar sesión"}`);
       }
